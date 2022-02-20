@@ -15,13 +15,37 @@ body {
   background-color: #ffffff;
   color: var(--first-site-color);
 }
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child {
+  margin-bottom: 0;
+}
 .list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
+.conteiner {
+  width: 1630px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .header {
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -31,7 +55,26 @@ body {
 .feature-list {
   list-style: none;
 }
+.header-conteiner {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  align-items: center;
+}
 /*logo*/
+.logo {
+  margin-right: 93px;
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -47,6 +90,12 @@ body {
   color: var(--accent-site-color);
 }
 /*навигация*/
+.nav-item {
+  margin-right: 40px;
+}
+.nav-item:last-child {
+  margin: 0;
+}
 .link.current {
   color: var(--accent-site-color);
   cursor: pointer;
@@ -60,6 +109,12 @@ body {
 }
 .link {
   color: var(--title-site-color);
+}
+.contacts {
+  margin-left: auto;
+}
+.contacts-phon {
+  margin-left: 50px;
 }
 .contacts .link:hover,
 .contacts .link:focus {
@@ -77,6 +132,9 @@ body {
   background-color: var(--basic-site-color);
   text-align: center;
 }
+.hero {
+  padding-bottom: 200px;
+}
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -87,7 +145,13 @@ body {
   background-color: var(--basic-site-color);
   color: #ffffff;
 }
+.hero-title {
+  padding: 200px 452px 0px 452px;
+}
 .button {
+  max-width: 250px;
+  min-width: 200px;
+  padding: 10px 32px;
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
@@ -96,6 +160,7 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border-radius: 4px;
   background-color: var(--accent-site-color);
   color: #ffffff;
 }
@@ -103,7 +168,13 @@ body {
 .button:hover {
   background-color: #188ce8;
 }
+.button {
+  margin-right: auto;
+  margin-top: 30px;
+  margin-left: auto;
+}
 /*особенности*/
+
 .list-title {
   font-weight: 700;
   font-size: 14px;
