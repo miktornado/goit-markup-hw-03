@@ -18,14 +18,23 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 h1:last-child,
 h2:last-child,
-h3:last-child {
+h3:last-child,
+p,
+ul {
   margin-bottom: 0;
+}
+img {
+  display: block;
+}
+ul {
+  padding-inline-start: 0px;
 }
 .list {
   padding-left: 0;
@@ -37,13 +46,13 @@ h3:last-child {
   text-decoration: none;
 }
 .conteiner {
-  width: 1630px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .header {
+  border: 1px solid #ececec;
   padding-top: 24px;
   padding-bottom: 25px;
   font-weight: 500;
@@ -131,11 +140,14 @@ h3:last-child {
 .hero {
   background-color: var(--basic-site-color);
   text-align: center;
-}
-.hero {
+  padding-top: 200px;
   padding-bottom: 200px;
+  min-height: 600px;
 }
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -144,9 +156,6 @@ h3:last-child {
   text-transform: uppercase;
   background-color: var(--basic-site-color);
   color: #ffffff;
-}
-.hero-title {
-  padding: 200px 452px 0px 452px;
 }
 .button {
   max-width: 250px;
@@ -177,6 +186,18 @@ h3:last-child {
 .feature-list {
   display: flex;
   flex-direction: row;
+  text-align: start;
+  padding-top: 94px;
+}
+.list-title,
+.text {
+  margin-right: 30px;
+}
+.list-title:last-child {
+  margin: 0;
+}
+.showroom-title {
+  margin-bottom: 50px;
 }
 
 .list-title {
@@ -195,6 +216,10 @@ h3:last-child {
   color: var(--first-site-color);
 }
 /*шоурум*/
+.showroom-conteiner {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .showroom-title {
   font-weight: 700;
   font-size: 36px;
@@ -204,10 +229,44 @@ h3:last-child {
   color: var(--title-site-color);
 }
 .showroom-list {
+  display: flex;
+}
+.showroom-item {
+  margin-right: 30px;
+}
+.showroom-item:last-child {
+  margin: 0;
+}
+.showroom-list {
   list-style: none;
 }
 /*команда*/
+.team {
+  background: #f5f4fa;
+}
+.team-conteiner {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team-list {
+  display: flex;
+}
+.team-item {
+  margin-right: 30px;
+}
+.team-item:last-child {
+  margin: 0;
+}
+.team-names {
+  background: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  min-height: 108px;
+}
 .title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -217,6 +276,7 @@ h3:last-child {
   color: var(--title-site-color);
 }
 .name {
+  padding-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -226,6 +286,7 @@ h3:last-child {
   color: var(--title-site-color);
 }
 .position {
+  padding-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -234,6 +295,14 @@ h3:last-child {
   color: var(--first-site-color);
 }
 /*портфолио*/
+.main-conteiner {
+  padding-top: 94px;
+  padding-bottom: 94;
+}
+.buttons-list {
+  display: flex;
+  justify-content: center;
+}
 .buttons {
   font-weight: 500;
   font-size: 16px;
@@ -243,6 +312,15 @@ h3:last-child {
   background: #f5f4fa;
   color: var(--title-site-color);
   cursor: pointer;
+  border-radius: 4px;
+  border: #eeeeee;
+  min-height: 38px;
+}
+.buttons-item {
+  padding-right: 8px;
+}
+.buttons-item:last-child {
+  padding: 0;
 }
 .buttons:hover,
 .buttons:focus {
@@ -251,6 +329,37 @@ h3:last-child {
 }
 .buttons .corrent {
   color: var(--accent-site-color);
+}
+.lists {
+  list-style: none;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.portfolio-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+.portfolio-item:nth-child(n + 7) {
+  margin-bottom: 94px;
+}
+.cards {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 110px;
+}
+.lists-title {
+  margin-top: 20px;
+}
+.category {
+  margin-top: 4px;
 }
 .lists-title {
   font-weight: 700;
@@ -273,6 +382,18 @@ h3:last-child {
 .footer {
   background: var(--basic-site-color);
 }
+.footer-conteiner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-item {
+  padding-bottom: 9px;
+}
+.footer-item:last-child {
+  padding: 0;
+}
 .footer .link {
   font-size: 14px;
   line-height: 1.71;
@@ -289,6 +410,7 @@ h3:last-child {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer .footer-logo {
+  padding-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
